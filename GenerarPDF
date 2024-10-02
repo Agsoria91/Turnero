@@ -80,16 +80,20 @@
             const clinica = document.getElementById('clinica').value;
             const direccion = document.getElementById('direccion').value;
 
-            // Dibuja un rectángulo como encabezado
-            doc.setFillColor("#009900");
+            // Dibujar un rectángulo como encabezado
+            doc.setFillColor("#009900"); // Verde Techint
             doc.rect(0, 0, 210, 30, "F");  // Rectángulo en la parte superior
+
+            // Fondo color #f6eded detrás del texto
+            doc.setFillColor("#f6eded"); //Gris claro para fondo de texto
+            doc.rect(0, 30, 210, 20, "F");  // Rectángulo detrás del texto (Hay que ver el tamaño del PDF)
 
             // Estilos y formato del PDF
             doc.setFont("Helvetica", "normal");
             doc.setFontSize(12);
-            doc.text("Buenos días Estimado/a.", 20, 40);
-            doc.text("Nos comunicamos del Centro de Reclutamiento de TECHINT,", 20, 45);
-            doc.text("para informarle que se encuentra citado a realizar un examen médico.", 20, 50);
+            doc.text("Saludos", 20, 35);
+            doc.text("Nos comunicamos del Centro de Reclutamiento de TECHINT E&C,", 20, 40);
+            doc.text("para informarle que se encuentra citado a realizar un examen médico.", 20, 45);
 
             doc.setFont("Helvetica", "bold");
             doc.text("INFORMACIÓN DEL TURNO", 20, 60);
